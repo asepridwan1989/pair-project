@@ -5,6 +5,12 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Category.associate = function(models) {
     // associations can be defined here
+
+    Category.belongsToMany(models.Trip, {
+      through: models.TripCategory
+    });
+
+    // Category.hasMany(models.TripCategory);
   };
   return Category;
 };

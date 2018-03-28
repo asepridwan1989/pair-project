@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "uijwcdje",
-    "password": "pJA0oO88KhnLyfIPkNhSoUO-PL3Pr_Vc",
-    "database": "uijwcdje",
-    "host": "stampy.db.elephantsql.com",
+    "username": "postgres",
+    "password": "w12",
+    "database": "pairProjects",
+    "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {

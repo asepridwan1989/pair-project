@@ -5,7 +5,9 @@ module.exports = (sequelize, DataTypes) => {
     CategoryId: DataTypes.INTEGER
   }, {});
   TripCategory.associate = function(models) {
-    // associations can be defined here
+    // // associations can be defined here
+    // TripCategory.belongsTo(models.Trip)
+    // TripCategory.belongsTo(models.Category)
   };
   return TripCategory;
 };

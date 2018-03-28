@@ -1,0 +1,23 @@
+<html>
+  <head>
+      <title></title>
+  </head>
+  <body>
+      <h1>Home</h1>
+      <table>
+        <thead>
+          <th>Trip List</th>
+          <th>Waktu</th>
+          <th>Budget</th>
+          <th>Quota</th>
+        </thead>
+        <tbody>
+            <% for(let i=0; i < listTrip.legth; i++){ %>
+                <tr>
+                  <td><%= listTrip[i].id %></td>
+                </tr>
+            <% } %>
+        </tbody>
+      </table>
+  </body>
+</html>
