@@ -15,9 +15,12 @@ module.exports = (sequelize, DataTypes) => {
       through: models.TripCategory
     });
 
-    // Trip.belongsToMany(models.User, {
-    //   through: models.comment
-    // });
+
+    Trip.belongsToMany(models.User, {
+      through: models.UserTrip
+    });
+
+    Trip.hasMany(models.Comment)
   };
   return Trip;
 };

@@ -6,7 +6,12 @@ app.set('view engine', 'ejs');
 
 // ====== Routes Connection ======
 const indexRoutes = require('./routes')
-app.use('/', indexRoutes)
+const tripRoutes = require('./routes/trips.js')
+
+app.use('/', indexRoutes);
+app.use('/trips', tripRoutes)
+
+
 
 app.listen(3000, ()=>{
   console.log('Connected');

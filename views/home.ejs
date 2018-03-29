@@ -1,0 +1,40 @@
+<html>
+  <head>
+      <title></title>
+  </head>
+  <body>
+    <header>
+      <h1>NgeTrip YuK!!</h1>
+      <nav>
+        <div class="sign-btn">
+          <a href="">login</a> |
+          <a href="">Register</a>
+        </div>
+      </nav>
+    </header>
+
+    <section>
+      <table>
+        <thead>
+          <th>Trip List</th>
+          <th>Waktu</th>
+          <th>Budget</th>
+          <th>Quota</th>
+        </thead>
+        <tbody>
+          <% for(let i=0; i < listTrip.length; i++){ %>
+            <tr>
+              <td><%= listTrip[i].trip_name %></td>
+              <td><%= listTrip[i].trip_time %></td>
+              <td><%= listTrip[i].budget_estimation %></td>
+              <td><%= listTrip[i].trip_quota %></td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </section>
+    <footer>
+    </footer>
+
+  </body>
+</html>
