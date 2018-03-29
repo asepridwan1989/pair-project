@@ -36,24 +36,34 @@
         </div>
         <article>
             <h2><%= detail.trip_name%></h2>
-            <p><%= detail.itinerary %></p>      
+            <p><%= detail.itinerary %>
+              Day 1-Kita akan terbang dr KLIA2 jam 3 siang dan di perkirakan sampai Phnom penh jam 4 sore,langsung Check in ,dilanjutkan dinner dan acara bebas,,kita bisa muter2 di phom penh menggunakan tuk2 dan night market.
+Day 2-Tour kali ini kita mulakan ke The Killing Field(ladang pembantaian Pol Pot,dilanjutkan ke Tuol Sleng Genocide Museum(penjara keji pemerintahan Pol Pot),setelah itu kita ke Wat Phnom,Royal Palace,Independence Monument, Central Market terakhir Nongkrong di tepi sungai Mekong..Kita bisa mampir makan malam di Warung Bali atau Sumatra Restaurant..Balik ke Hotel istirahat..
+Day 3- Setelah sarapan kita akan ke Bandara untuk terbang ke Kuala Lumpur di lanjutkan ke kota masing2..
+            </p>      
             <div class="User">
               <h5><%= detail.Users[0].name %></h5>
             </div>    
         </article>
-         
-        <div class="comment-box">
-          <div class="comment">
+         <hr>
+        <div class="comment-area">
+          <h2>Comments</h2>
+          <div class="comment-box">
+            <% for(let i=0; i < comment.length; i++){ %>
+              <div class="comment">
+                <p><%= comment[i].comment%></p>
+              </div>
+            <% } %>
           </div>
-          
+
           <div class="comment-form">
             <form action='/trips/<%= detail.id%>/detail' method="POST">
-              <input type="hidden" name="idcomment" value="<%= detail.id%>">
+              <input type="hidden" name="idTrip" value="<%= detail.id%>">
               <label for="usrnm">Nama : </label>
-                <input type="text" name="commentator" id="usr">
+                <input type="text" name="name" id="usr">
                 <div class="form-group">
                   <label for="comment">Comment:</label>
-                  <textarea class="form-control" rows="5" id="comment"></textarea>
+                  <textarea class="form-control" rows="5" id="comment" name="comment"></textarea>
                 </div>
                 <input class="btn btn-primary" type="submit" value="Send">
             </form>

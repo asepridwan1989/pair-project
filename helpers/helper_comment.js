@@ -2,7 +2,7 @@ const db = require('../models');
 
 function getCommentByIdTrip(idTrip,cb){
   db.Comment.findAll({
-      where: {id: idTrip}
+      where: {TripId: idTrip}
   })
   .then(function(listComment){
     cb(listComment)
